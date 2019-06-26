@@ -1,10 +1,7 @@
-FROM ubuntu:13.04
+FROM simdd/node-ubuntu-supervisor:latest
 
-RUN apt-get update
-RUN apt-get upgrade -yb
-
-RUN apt-get install -y supervisor
-RUN mkdir -p /var/log/supervisor
+COPY . /app
+WORKDIR /app
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
