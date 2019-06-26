@@ -53,21 +53,8 @@ def user():
     return jsonify(userinfo)
 
 
-def startWeb():
-    dirname = os.path.dirname(__file__)
-    filename = os.path.join(dirname, 'web/index.html')
-    print('------------s')
-    print(filename)
-    print(sys.exec_prefix)
-    print('------------e')
-    subprocess.call(["parcel", filename])
-
-
 def main():
-    t = threading.Thread(target=startWeb)
-    t.daemon = True
-    t.start()
-    app.run(host='127.0.0.1', port=7337)
+    app.run(host='127.0.0.1', port=4321)
 
 
 if __name__ == "__main__":

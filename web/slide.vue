@@ -23,13 +23,13 @@ export default {
 
   methods: {
     getUser() {
-      axios.get("http://127.0.0.1:7337/user").then(({ data }) => {
+      axios.get("http://127.0.0.1:4321/user").then(({ data }) => {
         this.user = data;
       });
     },
 
     getSlide() {
-      axios.get("http://127.0.0.1:7337/page").then(({ data }) => {
+      axios.get("http://127.0.0.1:4321/page").then(({ data }) => {
         this.slide = data;
       });
     }

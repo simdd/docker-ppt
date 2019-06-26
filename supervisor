@@ -1,0 +1,8 @@
+[supervisord]
+nodaemon=true
+
+[program:server]
+command=python bin.py demo.ppts
+
+[program:web]
+command=npm run start
