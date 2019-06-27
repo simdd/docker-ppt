@@ -1,15 +1,13 @@
 import os
 import re
 import sys
-import threading
-import subprocess
 from flask_cors import CORS
 from flask import Flask, jsonify
 
 # parse file
 filename = os.path.abspath(sys.argv[1])
 
-with open(filename, 'r') as file:
+with open(filename, 'r', encoding="utf-8") as file:
     text = file.read()
 
 
