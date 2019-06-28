@@ -9,17 +9,25 @@
 # }
 
 --cover--
-title: 这里是名字adadf
-author: simddasdf
-date: 2019/02/10
+title: 单页应用数据管理
+author: 辛栋栋
+date: 2019/06/28
 --cover--
 
 --page--
-page1
-asdfa
-asdfasdfasdfs
+
+## todo
+
+- <a href='https://git.forchange.cn/ninth-studio/future-railway/frontend/tree/master/src/store/panel' target="_blank">业务</a>中如何管理数据？
+- 介绍 **[redux](https://www.redux.org.cn/)**、**vuex**
+- **redux-thunk**、**redux-promise**
 
 ~
 
-page2
+![image](https://static.pandateacher.com/d17af59ecd2d8e38258e5c3ffcdde27b.jpg)
+
+~
+
+# END
+
 --page--

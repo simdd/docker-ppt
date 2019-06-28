@@ -5,12 +5,13 @@
       <p class="fs24 pt50">{{user.author}}</p>
       <p class="fs24 pt30">{{user.date}}</p>
     </section>
-    <section class="slide" v-else>{{slide[idx]}}</section>
+    <section class="slide" v-else v-html="slide[idx]"></section>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import marked from "marked";
 
 export default {
   data() {
@@ -30,6 +31,7 @@ export default {
 
     getSlide() {
       axios.get("http://127.0.0.1:4321/page").then(({ data }) => {
+        data = data.map(item => marked(item));
         this.slide = data;
       });
     }
